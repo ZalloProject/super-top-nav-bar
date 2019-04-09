@@ -9,15 +9,10 @@
   },
   "scripts": {
     "build": "webpack --mode production -d --watch --display-error-details",
-    "dev": "webpack -d --watch --mode development ",
-    "server-dev": "nodemon server/server.js",
-    "start": "node server/server.js"
+    "dev": "webpack -d --watch --mode development "
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
     "css-loader": "^2.1.1",
-    "express": "^4.16.4",
     "jest": "^24.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

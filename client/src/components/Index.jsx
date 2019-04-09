@@ -5,7 +5,6 @@ import Sell from './Sell.jsx';
 import HomeLoans from './HomeLoans.jsx';
 import AgentFinder from './AgentFinder.jsx';
 import Logo from './Logo.jsx';
-import RightSide from './RightSide.jsx';
 
 class Index extends React.Component {
   constructor(props){
@@ -22,14 +21,33 @@ class Index extends React.Component {
 
   render(){
     return(
-      <div>
-        <Buy handleHover={this.handleHover} view={this.state.view}/>
-        <Rent handleHover={this.handleHover} view={this.state.view}/>
-        <Sell handleHover={this.handleHover} view={this.state.view}/>
-        <HomeLoans handleHover={this.handleHover} view={this.state.view}/>
-        <AgentFinder handleHover={this.handleHover} view={this.state.view}/>
+      <div className="superNavOuterContainer">
+        <span className="superNavInnerContainer">
+        <Buy 
+        handleHover={this.handleHover} 
+        view={this.state.view}/>
+        Buy
+        <Rent 
+        handleHover={this.handleHover} 
+        view={this.state.view}/>
+        Rent
+        <Sell handleHover={this.handleHover} 
+        view={this.state.view}/>
+        Sell
+        <HomeLoans 
+        handleHover={this.handleHover} 
+        view={this.state.view}/>
+        Home Loans
+        <AgentFinder 
+        handleHover={this.handleHover} 
+        view={this.state.view}/>
+        Agent Finder
         <Logo />
-        <RightSide />
+        List your rental
+        Advertise
+        Sign in or Join
+        Help
+        </span>
       </div>
     )
   }

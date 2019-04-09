@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Buy = () => {
+const Buy = ({handleHover, view}) => {
   return (
-    <div>akdjfakdfk</div>
+    <div></div>
   )
 }
 
