@@ -2,19 +2,19 @@ import React from 'react';
 
 const RightSide = () => {
   return (
-    <div>
-      <p className="superNavText">
+    <div className="superNavRightSide">
+      {/* <p id="superNavTextRental">
         List your rental
       </p>
-      <p className="superNavText">
+      <p id="superNavTextAdvertise">
         Advertise
       </p>
-      <p className="superNavText">
+      <p id="superNavTextSignIn">
         Sign in or Join
       </p>
-      <p className="superNavText">
+      <p id="superNavTextHelp">
         Help
-      </p>
+      </p> */}
     </div>
   )
 }
