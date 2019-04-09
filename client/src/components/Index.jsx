@@ -20,7 +20,6 @@ class Index extends React.Component {
     }, ()=>{
       console.log(this.state)
     })
-    
   }
 
   render(){
@@ -57,23 +56,33 @@ class Index extends React.Component {
             Agent Finder
           </p>
         <img src="https://s3-us-west-2.amazonaws.com/agents-zallo/zalloLogo.jpg" 
-          id="superNavLogo">
+          id="superNavLogo"
+          onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
         </img>
-        <p id="superNavTextRental">
+        <p 
+          id="superNavTextRental"
+          onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           List your rental
         </p>
-        <p id="superNavTextAdvertise">
+        <p 
+        id="superNavTextAdvertise"
+        onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           Advertise
         </p>
-        <p id="superNavTextSignIn">
+        <p 
+        id="superNavTextSignIn"
+        onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           Sign in or Join
         </p>
-        <p id="superNavTextHelp">
+        <p 
+        id="superNavTextHelp"
+        onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           Help
         </p>
       </div>
     )
   }
 }
+
 
 export default Index
