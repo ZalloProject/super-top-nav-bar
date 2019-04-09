@@ -5,7 +5,6 @@ import Sell from './Sell.jsx';
 import HomeLoans from './HomeLoans.jsx';
 import AgentFinder from './AgentFinder.jsx';
 import Logo from './Logo.jsx';
-import RightSide from './RightSide.jsx'
 
 class Index extends React.Component {
   constructor(props){
@@ -23,27 +22,34 @@ class Index extends React.Component {
   render(){
     return(
       <div className="superNavContainer">
-        <Buy onHover={(e)=> {this.handleHover}} view={this.state.view}/>
-        <p id="superNavTextBuy">
-          Buy
-        </p>
-        <Rent onHover={(e)=> {this.handleHover}} view={this.state.view}/>
-        <p id="superNavTextRent">
-          Rent
-        </p>
-        <Sell onHover={(e)=> {this.handleHover}} view={this.state.view}/>
-        <p id="superNavTextSell">
-          Sell
-        </p>
-        <HomeLoans onHover={(e)=> {this.handleHover}} view={this.state.view}/>
-        <p id="superNavTextLoans">
-          Home Loans
-        </p>
-        <AgentFinder onHover={(e)=> {this.handleHover}} view={this.state.view}/>
-        <p id="superNavTextAgent">
-          Agent Finder
-        </p>
-        <Logo/>
+        <Buy onHover={(e)=> {this.handleHover}} 
+          view={this.state.view}/>
+          <p id="superNavTextBuy">
+            Buy
+          </p>
+        <Rent onHover={(e)=> {this.handleHover}} 
+          view={this.state.view}/>
+          <p id="superNavTextRent">
+            Rent
+          </p>
+        <Sell onHover={(e)=> {this.handleHover}}
+          view={this.state.view}/>
+          <p id="superNavTextSell">
+            Sell
+          </p>
+        <HomeLoans onHover={(e)=> {this.handleHover}}
+          view={this.state.view}/>
+          <p id="superNavTextLoans">
+            Home Loans
+          </p>
+        <AgentFinder onHover={(e)=> {this.handleHover}} 
+          view={this.state.view}/>
+          <p id="superNavTextAgent">
+            Agent Finder
+          </p>
+        <img src="https://s3-us-west-2.amazonaws.com/agents-zallo/zalloLogo.jpg" 
+          id="superNavLogo">
+        </img>
         <p id="superNavTextRental">
           List your rental
         </p>
