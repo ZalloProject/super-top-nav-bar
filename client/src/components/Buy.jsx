@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Buy = ({handleHover, view}) => {
-  return (
-    <div></div>
-  )
+  return (<div>
+    <p className="superNavText">
+      Buy
+    </p>
+  </div>)
 }
 
 export default Buy
