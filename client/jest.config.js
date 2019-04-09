@@ -3,7 +3,7 @@ module.exports = {
   displayName: 'source',
   rootDir: './../',
   testMatch: [
-    '<rootDir>/src/form.test.js'
+    '<rootDir>/src/supertopnavbar.test.js'
   ],
   setupFilesAfterEnv: [
     '<rootDir>/src/setupTests.js'

@@ -22,7 +22,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'top-bundle.js',
+    filename: 'bundle.js',
     path: path.join(__dirname, './client/dist'),
   },
 };
