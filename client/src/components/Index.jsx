@@ -4,7 +4,6 @@ import Rent from './Rent.jsx';
 import Sell from './Sell.jsx';
 import HomeLoans from './HomeLoans.jsx';
 import AgentFinder from './AgentFinder.jsx';
-import Logo from './Logo.jsx';
 
 class Index extends React.Component {
   constructor(props){
@@ -12,39 +11,49 @@ class Index extends React.Component {
     this.state = {
       view: '',
     }
-    this.handleHover = this.handleHover.bind(this)
+    this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this)
   }
 
-  handleHover(e){
-    console.log(e)
+  handleOnMouseEnter(str){
+    this.setState({
+      view: str
+    }, ()=>{
+      console.log(this.state)
+    })
+    
   }
 
   render(){
     return(
       <div className="superNavContainer">
-        <Buy onHover={(e)=> {this.handleHover}} 
+        <Buy 
           view={this.state.view}/>
-          <p id="superNavTextBuy">
+          <p id="superNavTextBuy" 
+            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Buy
           </p>
-        <Rent onHover={(e)=> {this.handleHover}} 
+        <Rent 
           view={this.state.view}/>
-          <p id="superNavTextRent">
+          <p id="superNavTextRent"
+            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Rent
           </p>
-        <Sell onHover={(e)=> {this.handleHover}}
+        <Sell
           view={this.state.view}/>
-          <p id="superNavTextSell">
+          <p id="superNavTextSell"
+            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Sell
           </p>
-        <HomeLoans onHover={(e)=> {this.handleHover}}
+        <HomeLoans
           view={this.state.view}/>
-          <p id="superNavTextLoans">
+          <p id="superNavTextLoans"
+            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Home Loans
           </p>
-        <AgentFinder onHover={(e)=> {this.handleHover}} 
+        <AgentFinder
           view={this.state.view}/>
-          <p id="superNavTextAgent">
+          <p id="superNavTextAgent"
+            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Agent Finder
           </p>
         <img src="https://s3-us-west-2.amazonaws.com/agents-zallo/zalloLogo.jpg" 

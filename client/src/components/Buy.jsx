@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Buy = ({handleHover, view}) => {
+const Buy = ({view}) => {
   return (<div>
 
   </div>)
