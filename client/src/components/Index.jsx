@@ -17,8 +17,6 @@ class Index extends React.Component {
   handleOnMouseEnter(str){
     this.setState({
       view: str
-    }, ()=>{
-      console.log(this.state)
     })
   }
 
