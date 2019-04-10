@@ -4,6 +4,7 @@ import Rent from './Rent.jsx';
 import Sell from './Sell.jsx';
 import HomeLoans from './HomeLoans.jsx';
 import AgentFinder from './AgentFinder.jsx';
+import style from './style.css';
 
 class Index extends React.Component {
   constructor(props){
@@ -22,58 +23,58 @@ class Index extends React.Component {
 
   render(){
     return(
-      <div className="superNavContainer">
+      <div className={style.superNavContainer}>
         <Buy 
           view={this.state.view}/>
-          <p id="superNavTextBuy" 
+          <p id={style.superNavTextBuy} 
             onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Buy
           </p>
         <Rent 
           view={this.state.view}/>
-          <p id="superNavTextRent"
+          <p id={style.superNavTextRent}
             onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Rent
           </p>
         <Sell
           view={this.state.view}/>
-          <p id="superNavTextSell"
+          <p id={style.superNavTextSell}
             onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Sell
           </p>
         <HomeLoans
           view={this.state.view}/>
-          <p id="superNavTextLoans"
+          <p id={style.superNavTextLoans}
             onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Home Loans
           </p>
         <AgentFinder
           view={this.state.view}/>
-          <p id="superNavTextAgent"
+          <p id={style.superNavTextAgent}
             onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Agent Finder
           </p>
         <img src="https://s3-us-west-2.amazonaws.com/agents-zallo/zalloLogo.jpg" 
-          id="superNavLogo"
+          id={style.superNavLogo}
           onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
         </img>
         <p 
-          id="superNavTextRental"
+          id={style.superNavTextRental}
           onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           List your rental
         </p>
         <p 
-        id="superNavTextAdvertise"
+        id={style.superNavTextAdvertise}
         onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           Advertise
         </p>
         <p 
-        id="superNavTextSignIn"
+        id={style.superNavTextSignIn}
         onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           Sign in or Join
         </p>
         <p 
-        id="superNavTextHelp"
+        id={style.superNavTextHelp}
         onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
           Help
         </p>

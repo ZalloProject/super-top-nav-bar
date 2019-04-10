@@ -1,14 +1,15 @@
 import React from 'react';
+import style from './style.css'
 
 const AgentFinder = ({view}) => {
   return (<div>
     {view === 'Agent Finder' ? (
-    <div className="superNavAgentModal">
-      <h3 id="modalAgentTitle1">Looking for Pros?</h3>
-        {col1.map((col1Item, idx) => <span id={"agentModalColOne" + idx} className="modalText" key={idx}>{col1Item}</span>)}
-      <span className="divider"></span>
-      <h3 id="modalAgentTitle2">I'm a pro</h3>
-        {col2.map((col2Item, idx) => <span id={"agentModalColTwo" + idx} className="modalText" key={idx}>{col2Item}</span>)}
+    <div className={style.superNavAgentModal}>
+      <h3 id={style.modalAgentTitle1}>Looking for Pros?</h3>
+        {col1.map((col1Item, idx) => <span id={style["agentModalColOne" + idx]} className={style.modalText} key={idx}>{col1Item}</span>)}
+      <span className={style.divider}></span>
+      <h3 id={style.modalAgentTitle2}>I'm a pro</h3>
+        {col2.map((col2Item, idx) => <span id={style["agentModalColTwo" + idx]} className={style.modalText}  key={idx}>{col2Item}</span>)}
     </div>
     ) : (
     <div></div>
