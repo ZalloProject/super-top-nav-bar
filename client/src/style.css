@@ -21,8 +21,10 @@ html * {
   padding: 10px;
   padding-bottom: 20px;
   display: grid;
-  grid-template-columns:
-    60px 60px 60px 110px 120px 30% 10% 8% 10% 10%;
+  /* grid-template-columns:
+    60px 60px 60px 110px 120px 30% 10% 8% 10% 10%; */
+  grid-template-columns: repeat(10, auto);
+  column-gap: 30px;
   max-height: 50px;
   min-height: 50px;
   border-bottom: 1px solid #D8D8D8;
@@ -57,8 +59,8 @@ img#superNavLogo {
   grid-column: 6 / 7;
   grid-row: 1/2;
   max-width: 160px;
-  justify-content: center;
-  margin-left: 70px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 #superNavTextRental {

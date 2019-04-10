@@ -1,12 +1,12 @@
 import React from 'react';
-import Buy from './Buy.jsx';
-import Rent from './Rent.jsx';
-import Sell from './Sell.jsx';
-import HomeLoans from './HomeLoans.jsx';
-import AgentFinder from './AgentFinder.jsx';
+import Buy from './components/Buy.jsx';
+import Rent from './components/Rent.jsx';
+import Sell from './components/Sell.jsx';
+import HomeLoans from './components/HomeLoans.jsx';
+import AgentFinder from './components/AgentFinder.jsx';
 import style from './style.css';
 
-class Index extends React.Component {
+class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -84,4 +84,4 @@ class Index extends React.Component {
 }
 
 
-export default Index
+export default App

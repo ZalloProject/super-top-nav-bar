@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './style.css'
+import style from '../../src/style.css';
 
 const Buy = ({view}) => {
   return (<div>

@@ -3,7 +3,7 @@ module.exports = {
   displayName: 'client',
   rootDir: './../',
   testMatch: [
-    '<rootDir>/client/supertopnavbar.test.js'
+    '<rootDir>/client/client.test.js'
   ],
   setupFilesAfterEnv: [
     '<rootDir>/client/setupTests.js'
