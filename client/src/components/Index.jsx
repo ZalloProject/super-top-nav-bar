@@ -54,31 +54,31 @@ class Index extends React.Component {
             onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
             Agent Finder
           </p>
-        <img src="https://s3-us-west-2.amazonaws.com/agents-zallo/zalloLogo.jpg" 
-          id={style.superNavLogo}
+          <img src="https://s3-us-west-2.amazonaws.com/agents-zallo/zalloLogo.jpg" 
+            id={style.superNavLogo}
+            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+          </img>
+          <p 
+            id={style.superNavTextRental}
+            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            List your rental
+          </p>
+          <p 
+          id={style.superNavTextAdvertise}
           onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
-        </img>
-        <p 
-          id={style.superNavTextRental}
+            Advertise
+          </p>
+          <p 
+          id={style.superNavTextSignIn}
           onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
-          List your rental
-        </p>
-        <p 
-        id={style.superNavTextAdvertise}
-        onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
-          Advertise
-        </p>
-        <p 
-        id={style.superNavTextSignIn}
-        onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
-          Sign in or Join
-        </p>
-        <p 
-        id={style.superNavTextHelp}
-        onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
-          Help
-        </p>
-      </div>
+            Sign in or Join
+          </p>
+          <p 
+          id={style.superNavTextHelp}
+          onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            Help
+          </p>
+        </div>
     )
   }
 }
