@@ -5,10 +5,10 @@ const AgentFinder = ({view}) => {
     {view === 'Agent Finder' ? (
     <div className="superNavAgentModal">
       <h3 id="modalAgentTitle1">Looking for Pros?</h3>
-        {col1.map((col1Item, idx) => <span id={"AgentModalColOne" + idx} className="modalText" key={idx}>{col1Item}</span>)}
+        {col1.map((col1Item, idx) => <span id={"agentModalColOne" + idx} className="modalText" key={idx}>{col1Item}</span>)}
       <span className="divider"></span>
       <h3 id="modalAgentTitle2">I'm a pro</h3>
-        {col2.map((col2Item, idx) => <span id={"AgentModalColTwo" + idx} className="modalText" key={idx}>{col2Item}</span>)}
+        {col2.map((col2Item, idx) => <span id={"agentModalColTwo" + idx} className="modalText" key={idx}>{col2Item}</span>)}
     </div>
     ) : (
     <div></div>

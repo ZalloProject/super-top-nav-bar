@@ -5,12 +5,13 @@ const Rent = ({view}) => {
     {view === 'Rent' ? (
     <div className="superNavRentModal">
       <h3 id="modalRentTitle1">Search for Rentals</h3>
-        {col1.map((col1Item, idx) => <span id={"RentModalColOne" + idx} className="modalText" key={idx}>{col1Item}</span>)}
+        {col1.map((col1Item, idx) => <span id={"rentModalColOne" + idx} className="modalText" key={idx}>{col1Item}</span>)}
       <span className="divider"></span>
+      <span className="rentDivider"></span>
       <h3 id="modalRentTitle2">I'm a Rental Manager</h3>
-        {col2.map((col2Item, idx) => <span id={"RentModalColTwo" + idx} className="modalText" key={idx}>{col2Item}</span>)}
+        {col2.map((col2Item, idx) => <span id={"rentModalColTwo" + idx} className="modalText" key={idx}>{col2Item}</span>)}
       <h3 id="modalRentTitle3"> I'm a Renter</h3>
-        {col3.map((col3Item, idx) => <span id={"RentModalColThree" + idx} className="modalText" key={idx}>{col3Item}</span>)}
+        {col3.map((col3Item, idx) => <span id={"rentModalColThree" + idx} className="modalText" key={idx}>{col3Item}</span>)}
     </div>
     ) : (
     <div></div>
