@@ -4,13 +4,13 @@ const Buy = ({view}) => {
   return (<div>
     {view === 'Buy' ? (
     <div className="superNavBuyModal">
-      <span className="modalTitle">Phoenix homes for sale</span>
+      <h3 className="modalTitle">Phoenix homes for sale</h3>
         {col1.map((col1Item, idx) => <span className="col1Item" key={idx}>{col1Item}</span>)}
-      <span className="modalTitle">Resources</span>
+      <h3 className="modalTitle">Resources</h3>
         {col2.map((col2Item, idx) => <span className="col2Item" key={idx}>{col2Item}</span>)}
     </div>
     ) : (
-      <div></div>
+    <div></div>
     )}
   </div>)
 }
