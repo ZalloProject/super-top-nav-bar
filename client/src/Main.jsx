@@ -6,7 +6,7 @@ import HomeLoans from './components/HomeLoans.jsx';
 import AgentFinder from './components/AgentFinder.jsx';
 import style from './style.css';
 
-class App extends React.Component {
+class Main extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -84,4 +84,4 @@ class App extends React.Component {
 }
 
 
-export default App
+export default Main

@@ -22,6 +22,7 @@
     "express": "^4.16.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.7.1",
+    "jest-cli": "^24.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
@@ -35,17 +36,22 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest-css-modules": "^2.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   },
   "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/client/src/setupTests.js"
+    ],
     "moduleFileExtensions": [
       "js",
       "json",
       "jsx"
     ],
-    "projects": [
-      "<rootDir>/client/jest.config.js"
-    ]
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   }
 }
