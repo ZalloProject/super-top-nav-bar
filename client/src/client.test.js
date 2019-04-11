@@ -10,7 +10,7 @@ import Buy from './components/Buy.jsx'
 describe('Components', () => {
   test('App component should render many children', () => {
     const wrapper = mount(<App/>);
-    expect(wrapper.find('div').children()).toHaveLength(20);
+    expect(wrapper.find('div').children()).toHaveLength(21);
   });
 
   test('App should have a handleHover function', () => {
