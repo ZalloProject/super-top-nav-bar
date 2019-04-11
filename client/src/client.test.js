@@ -35,7 +35,6 @@ describe('Components', () => {
     });
     expect(wrapper.find('#rentModalColOne2').exists).toBeTruthy();
     expect(wrapper.state().view).toBe('Rent');
-    expect(wrapper.find('#sellModalColOne0').exists).toBeTruthy();
   });
 
   test('should set state to Buy when handleHover is triggered', () => {
@@ -50,6 +49,42 @@ describe('Components', () => {
     expect(wrapper.state().view).toBe('Buy');
   });
 
+  test('should set state to Sell when handleHover is triggered', () => {
+    const wrapper = mount(<Main/> );
+    expect(wrapper.find('#superNavTextSell').exists).toBeTruthy()
+    expect(wrapper.state().view).toBe("")
+    wrapper.find('#superNavTextSell').simulate('mouseover');
+    wrapper.setState({
+      view: 'Sell'
+    });
+    expect(wrapper.find('#sellModalColOne2').exists).toBeTruthy();
+    expect(wrapper.state().view).toBe('Sell');
+  });
+
+  test('should set state to Loans when handleHover is triggered', () => {
+    const wrapper = mount(<Main/> );
+    expect(wrapper.find('#superNavTextLoans').exists).toBeTruthy()
+    expect(wrapper.state().view).toBe("")
+    wrapper.find('#superNavTextLoans').simulate('mouseover');
+    wrapper.setState({
+      view: 'Home Loans'
+    });
+    expect(wrapper.find('#LoansModalColOne2').exists).toBeTruthy();
+    expect(wrapper.state().view).toBe('Home Loans');
+  });
+
+  test('should set state to Agent when handleHover is triggered', () => {
+    const wrapper = mount(<Main/> );
+    expect(wrapper.find('#superNavTextAgent').exists).toBeTruthy()
+    expect(wrapper.state().view).toBe("")
+    wrapper.find('#superNavTextAgent').simulate('mouseover');
+    wrapper.setState({
+      view: 'Agent Finder'
+    });
+    expect(wrapper.find('#agentModalColOne2').exists).toBeTruthy();
+    expect(wrapper.state().view).toBe('Agent Finder');
+  });
+
   test('it should match the logo snapshot', () => {
     const wrapper = mount(<Main/> );
     expect(wrapper.find('#superNavLogo')).toMatchImageSnapshot();
@@ -58,12 +93,12 @@ describe('Components', () => {
   test('it should render an AgentFinder component', () => {
     const wrapper = mount(<Main/>)
     expect(('.modalText').length).toBe(10)
-    wrapper.setState({
-      view: 'Agent'
-    })
-    setTimeout(
-      expect(wrapper.find('#agentModalColOne2').text()).toBe("Home inspectors"), 100
-    )
+    // wrapper.setState({
+    //   view: 'Agent'
+    // })
+    // setTimeout(
+    //   expect(wrapper.find('#agentModalColOne2').text()).toBe("Home inspectors"), 100
+    // )
     
     
 
