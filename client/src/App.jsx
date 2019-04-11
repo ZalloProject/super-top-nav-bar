@@ -25,6 +25,7 @@ class App extends React.Component {
   render(){
     return(
       <div className={style.superNavContainer}>
+        <span className={style.tinyHamburg}></span>
         <Buy 
           view={this.state.view}/>
           <p id={style.superNavTextBuy} 
