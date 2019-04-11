@@ -12,7 +12,7 @@
     "dev": "webpack -d --watch --mode development ",
     "server-dev": "nodemon server/server.js",
     "start": "node server/server.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage --updateSnapshot"
   },
   "dependencies": {
     "babel-jest": "^24.7.1",
@@ -37,6 +37,7 @@
     "enzyme-adapter-react-16": "^1.12.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "jest-css-modules": "^2.0.0",
+    "jest-image-snapshot": "^2.8.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   },
