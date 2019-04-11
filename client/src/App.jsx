@@ -6,7 +6,7 @@ import HomeLoans from './components/HomeLoans.jsx';
 import AgentFinder from './components/AgentFinder.jsx';
 import style from './style.css';
 
-class Main extends React.Component {
+class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -15,7 +15,8 @@ class Main extends React.Component {
     this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this)
   }
 
-  handleOnMouseEnter(str){
+  handleOnMouseEnter(e){
+    let str = e.target.innerText
     this.setState({
       view: str
     })
@@ -27,55 +28,55 @@ class Main extends React.Component {
         <Buy 
           view={this.state.view}/>
           <p id={style.superNavTextBuy} 
-            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            onMouseEnter={this.handleOnMouseEnter}>
             Buy
           </p>
         <Rent 
           view={this.state.view}/>
           <p id={style.superNavTextRent}
-            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+          onMouseEnter={this.handleOnMouseEnter}>
             Rent
           </p>
         <Sell
           view={this.state.view}/>
           <p id={style.superNavTextSell}
-            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+          onMouseEnter={this.handleOnMouseEnter}>
             Sell
           </p>
         <HomeLoans
           view={this.state.view}/>
           <p id={style.superNavTextLoans}
-            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+          onMouseEnter={this.handleOnMouseEnter}>
             Home Loans
           </p>
         <AgentFinder
           view={this.state.view}/>
           <p id={style.superNavTextAgent}
-            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+          onMouseEnter={this.handleOnMouseEnter}>
             Agent Finder
           </p>
           <img src="https://s3-us-west-2.amazonaws.com/agents-zallo/zalloLogo.jpg" 
             id={style.superNavLogo}
-            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            onMouseEnter={this.handleOnMouseEnter}>
           </img>
           <p 
             id={style.superNavTextRental}
-            onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            onMouseEnter={this.handleOnMouseEnter}>
             List your rental
           </p>
           <p 
           id={style.superNavTextAdvertise}
-          onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            onMouseEnter={this.handleOnMouseEnter}>
             Advertise
           </p>
           <p 
           id={style.superNavTextSignIn}
-          onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            onMouseEnter={this.handleOnMouseEnter}>
             Sign in or Join
           </p>
           <p 
           id={style.superNavTextHelp}
-          onMouseEnter={(e)=>{this.handleOnMouseEnter(e.target.innerText)}}>
+            onMouseEnter={this.handleOnMouseEnter}>
             Help
           </p>
         </div>
@@ -84,4 +85,4 @@ class Main extends React.Component {
 }
 
 
-export default Main
+export default App

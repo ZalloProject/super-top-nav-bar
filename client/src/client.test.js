@@ -4,18 +4,17 @@ const { toMatchImageSnapshot } = require('jest-image-snapshot');
 expect.extend({ toMatchImageSnapshot });
 
 // import Index from './Index.jsx';
-import Main from './Main.jsx'
-import AgentFinder from '../src/components/AgentFinder.jsx';
-import Sell from '../src/components/Sell.jsx';
+import App from './App.jsx'
+import Buy from './components/Buy.jsx'
 
 describe('Components', () => {
-  test('Main component should render many children', () => {
-    const wrapper = mount(<Main/>);
+  test('App component should render many children', () => {
+    const wrapper = mount(<App/>);
     expect(wrapper.find('div').children()).toHaveLength(20);
   });
 
-  test('Main should have a handleHover function', () => {
-    const page = render( <Main/> );
+  test('App should have a handleHover function', () => {
+    const page = render( <App/> );
     const mockHover = jest.fn(str => {
       page.setState({
         view: str
@@ -26,7 +25,7 @@ describe('Components', () => {
   });
 
   test('should set state to Rent when handleHover is triggered', () => {
-    const wrapper = mount(<Main/> );
+    const wrapper = mount(<App/> );
     expect(wrapper.find('#superNavTextRent').exists).toBeTruthy()
     expect(wrapper.state().view).toBe("")
     wrapper.find('#superNavTextRent').simulate('mouseover');
@@ -38,7 +37,7 @@ describe('Components', () => {
   });
 
   test('should set state to Buy when handleHover is triggered', () => {
-    const wrapper = mount(<Main/> );
+    const wrapper = mount(<App/> );
     expect(wrapper.find('#superNavTextBuy').exists).toBeTruthy()
     expect(wrapper.state().view).toBe("")
     wrapper.find('#superNavTextBuy').simulate('mouseover');
@@ -50,7 +49,7 @@ describe('Components', () => {
   });
 
   test('should set state to Sell when handleHover is triggered', () => {
-    const wrapper = mount(<Main/> );
+    const wrapper = mount(<App/> );
     expect(wrapper.find('#superNavTextSell').exists).toBeTruthy()
     expect(wrapper.state().view).toBe("")
     wrapper.find('#superNavTextSell').simulate('mouseover');
@@ -62,7 +61,7 @@ describe('Components', () => {
   });
 
   test('should set state to Loans when handleHover is triggered', () => {
-    const wrapper = mount(<Main/> );
+    const wrapper = mount(<App/> );
     expect(wrapper.find('#superNavTextLoans').exists).toBeTruthy()
     expect(wrapper.state().view).toBe("")
     wrapper.find('#superNavTextLoans').simulate('mouseover');
@@ -74,7 +73,7 @@ describe('Components', () => {
   });
 
   test('should set state to Agent when handleHover is triggered', () => {
-    const wrapper = mount(<Main/> );
+    const wrapper = mount(<App/> );
     expect(wrapper.find('#superNavTextAgent').exists).toBeTruthy()
     expect(wrapper.state().view).toBe("")
     wrapper.find('#superNavTextAgent').simulate('mouseover');
@@ -86,22 +85,21 @@ describe('Components', () => {
   });
 
   test('it should match the logo snapshot', () => {
-    const wrapper = mount(<Main/> );
+    const wrapper = mount(<App/> );
     expect(wrapper.find('#superNavLogo')).toMatchImageSnapshot();
   });
 
-  test('it should render an AgentFinder component', () => {
-    const wrapper = mount(<Main/>)
+  test('it should have a bunch of modal text', () => {
+    const wrapper = mount(<App/>)
     expect(('.modalText').length).toBe(10)
-    // wrapper.setState({
-    //   view: 'Agent'
-    // })
-    // setTimeout(
-    //   expect(wrapper.find('#agentModalColOne2').text()).toBe("Home inspectors"), 100
-    // )
-    
-    
-
   });
 
+  test('it should have many event listeners', () => {
+    const wrapper = mount(<App />)
+    expect(wrapper.find('#superNavTextBuy').prop('onMouseEnter')).toBeTruthy();
+    expect(wrapper.find('#superNavTextRent').prop('onMouseEnter')).toBeTruthy();
+    expect(wrapper.find('#superNavTextSell').prop('onMouseEnter')).toBeTruthy();
+    expect(wrapper.find('#superNavTextLoans').prop('onMouseEnter')).toBeTruthy();
+    expect(wrapper.find('#superNavTextAgent').prop('onMouseEnter')).toBeTruthy();
+  });
 });

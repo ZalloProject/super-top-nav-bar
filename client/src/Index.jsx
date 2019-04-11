@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './Main.jsx';
+import App from './App.jsx';
 
-ReactDOM.render(<Main />, document.getElementById("super-top-nav-bar"))
+ReactDOM.render(<App />, document.getElementById("super-top-nav-bar"))
