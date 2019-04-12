@@ -3,14 +3,14 @@
   color: #2a2a33;
 } */
 
-html * {
+/* html * {
   -webkit-font-smoothing: antialiased;
   font-size: 14.5px;
   color: #292A32;
   font-family: "Open Sans",Gotham,gotham,Tahoma,Geneva,sans-serif;
   letter-spacing: 0.25px;
   white-space: nowrap;
-}
+} */
 
 #superNavTextBuy, #superNavTextRent, #superNavTextSell, #superNavTextSell,
 #superNavTextLoans, #superNavTextAgent, img#superNavLogo, #superNavTextRental,
@@ -19,13 +19,17 @@ html * {
 }
 
 .superNavContainer {
+  -webkit-font-smoothing: antialiased;
+  font-size: 14.5px;
+  color: #292A32;
+  font-family: "Open Sans",Gotham,gotham,Tahoma,Geneva,sans-serif;
+  letter-spacing: 0.25px;
+  white-space: nowrap;
+
   padding: 10px;
   padding-bottom: 20px;
   display: grid;
-  /* grid-template-columns:
-    60px 60px 60px 110px 120px 30% 10% 8% 10% 10%; */
-  grid-template-columns: repeat(10, auto);
-  column-gap: 30px;
+  grid-template-columns: 50px 50px 50px 110px 210px 10% 10% 10%;
   max-height: 50px;
   min-height: 50px;
   border-bottom: 1px solid #D8D8D8;
@@ -40,67 +44,85 @@ html * {
 #superNavTextBuy {
   grid-column: 1 / 2;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 5%;
 }
 
 #superNavTextRent {
   grid-column: 2 / 3;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 10%;
 }
 
 #superNavTextSell {
   grid-column: 3 / 4;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 15%;
 }
 
 #superNavTextLoans {
   grid-column: 4 / 5;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 20%;
 }
 
 #superNavTextAgent {
   grid-column: 5 / 6;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 30%;
 }
 
 img#superNavLogo {
   grid-column: 6 / 7;
   grid-row: 1/2;
   max-width: 160px;
-  margin-left: 30%;
-  margin-right: 30%;
+  /* margin-left: 30%; */
+  /* margin-right: 30%; */
   align-content: center;
-  /* position: absolute;
+  position: absolute;
+  left: 45%;
   right: 50%;
-  left: 50%; */
 }
 
 #superNavTextRental {
   grid-column: 7 / 8;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 65%;
 }
 
 #superNavTextAdvertise {
   grid-column: 8 / 9;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 75%;
 }
 
 #superNavTextSignIn {
   grid-column: 9 / 10;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 85%;
 }
 
 #superNavTextHelp {
   grid-column: 10 / 11;
   grid-row: 1/2;
-  font-size: 16px
+  font-size: 16px;
+  position: absolute;
+  left: 95%;
 }
 
 
@@ -703,7 +725,7 @@ h3#modalAgentTitle2{
   margin-right: -10px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 950px) {
   #superNavTextBuy, #superNavTextRent, #superNavTextSell, #superNavTextSell,
   #superNavTextLoans, #superNavTextAgent, #superNavTextRental,
   #superNavTextAdvertise, #superNavTextSignIn, #superNavTextHelp {

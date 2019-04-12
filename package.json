@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "build": "webpack --mode production -d --watch --display-error-details",
+    "build": "webpack --mode production -d --watch",
     "dev": "webpack -d --watch --mode development ",
     "server-dev": "nodemon server/server.js",
     "start": "node server/server.js",
